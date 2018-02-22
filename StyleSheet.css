@@ -1,0 +1,373 @@
+﻿<a href="https://www.freepik.com/free-photos-vectors/background" > Background image created by Dashu83 - Freepik.com</a > * {
+    box-sizing: border-box;
+    
+}
+
+body {
+    margin: 0;
+}
+
+#main {
+    display: flex;
+    min-height: calc(100vh - 40vh);
+}
+
+    #main > article {
+        flex: 1;
+    }
+
+    #main > nav,
+    #main > aside {
+        flex: 0 0 20vw;
+        background: beige;
+    }
+
+    #main > nav {
+        order: -1;
+    }
+
+header, footer, article, nav, aside {
+    padding: 1em;
+}
+
+header, footer {
+    background: black;
+    height: 10vh;
+}
+
+article {
+    background-image: url('images!/1640.jpg');
+    background-size: cover;
+}
+
+#div1 {
+    -webkit-backface-visibility: hidden; /* Chrome, Safari, Opera */
+    backface-visibility: hidden;
+}
+
+#div2 {
+    -webkit-backface-visibility: visible; /* Chrome, Safari, Opera */
+    backface-visibility: visible;
+}
+
+
+#nick {
+    height: 100%;
+    width: 5%;
+    border-radius: 50%;
+}
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: right;
+}
+
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+        li a:hover {
+            background-color: dimgray;
+        }
+
+
+/**fading color on left hand side*/
+nav {
+    
+    background-color: black;
+    -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    animation-name: example;
+    animation-duration: 10s;
+    animation-delay: 0s;
+}
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes example {
+    from {
+        background-color: black;
+    }
+
+    to {
+        background-color: white;
+    }
+}
+
+/* Standard syntax */
+@keyframes example {
+    from {
+        background-color: black;
+    }
+
+    to {
+        background-color: white;
+    }
+}
+
+p {
+    color: white;
+}
+
+P2 {
+    color: black;
+}
+
+
+
+/*fading image effect*/
+
+.container {
+    position: relative;
+    width: 50%;
+}
+
+.image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: black;
+    color: white;
+}
+
+.container:hover .overlay {
+    opacity: 1;
+}
+
+.text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+
+
+.carousel-wrapper {
+    height: 100%;
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.carousel-item {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 25px 50px;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.arrow {
+    position: absolute;
+    top: 0;
+    display: block;
+    width: 50px;
+    height: 100%;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    background: url("http://dancort.es/assets/img/css-carousel/carousel-arrow-dark.png") 50% 50% / 20px no-repeat;
+}
+
+.arrow-prev {
+    left: 0;
+}
+
+.arrow-next {
+    right: 0;
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.light {
+    color: white;
+}
+
+@media (max-width: 480px) {
+    .arrow, .light .arrow {
+        background-size: 10px;
+        background-position: 10px 50%;
+    }
+}
+
+
+
+/*Select every element*/
+[id^="item"] {
+    display: none;
+}
+
+.item-1 {
+    z-index: 3;
+    opacity: 1;
+    background-image: url('file:///C:\Users\WeCanCodeIT\Desktop\Bootstrap-LifeIsStrange-master\images\Ep1.png');
+    background-size: cover;
+    border: 10px solid dimgray;
+}
+
+.carouseltext1 {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: dimgray;
+    font-size: 25px;
+    text-align: center;
+}
+
+#carousel1 {
+    height: 100%;
+    width: 100%;
+}
+
+.item-2 {
+    border: 10px solid dimgray;
+    background-size: cover;
+}
+
+.carouseltext2 {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 25px;
+    text-align: center;
+}
+
+#carousel2 {
+    height: 100%;
+    width: 100%;
+}
+
+.item-3 {
+    background-size: cover;
+    border: 10px solid dimgray;
+}
+
+.carouseltext3 {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: dimgray;
+    font-size: 25px;
+    text-align: center;
+}
+
+#carousel3 {
+    height: 100%;
+    width: 100%;
+}
+
+.item-4 {
+    background-size: cover;
+    border: 10px solid dimgray;
+}
+
+.carouseltext4 {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 25px;
+    text-align: center;
+}
+
+#carousel4 {
+    height: 100%;
+    width: 100%;
+}
+
+.item-5 {
+    border: 10px solid dimgray;
+    background-size: cover;
+}
+
+.carouseltext5 {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: dimgray;
+    font-size: 25px;
+    text-align: center;
+}
+
+#carousel5 {
+    height: 100%;
+    width: 100%;
+}
+
+.item-6 {
+    border: 10px solid dimgray;
+    background-size: cover;
+}
+
+.carouseltext6 {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 25px;
+    text-align: center;
+}
+
+#carousel6 {
+    height: 100%;
+    width: 100%;
+}
+
+
+*:target ~ .item-1 {
+    opacity: 0;
+}
+
+#item-1:target ~ .item-1 {
+    opacity: 1;
+}
+
+#item-2:target ~ .item-2, #item-3:target ~ .item-3 {
+    z-index: 3;
+    opacity: 1;
+}
+
+
+#item-4:target ~ .item-4 {
+    z-index: 4;
+    opacity: 1;
+}
+
+#item-5:target ~ .item-5, #item-6:target ~ .item-6 {
+    z-index: 6;
+    opacity: 1;
+}
